@@ -1,0 +1,44 @@
+#This is a first project i've done while learning Python. It calculates the area of the 4 figures
+#Square, Rectangle, Circle and Triangle
+
+#Returns the area of the square
+def areaTriangle(base, height):
+	return (base / 2) * height
+	
+#Returns the area of rectangle
+def areaRectangle(length, width):
+	return length * width
+	
+#Returnss the area of triangle
+def areaSquare(side):
+	return side**2
+	
+#Returns the area of circle
+def areaCircle(radius):
+	return 3.14 * radius ** 2
+
+
+#Main Code
+def main():
+	operation = input("What perimeter would you like to calculate? \n Square \n Rectangle \n Circle \n Triangle ")
+	if(operation != 'square' and operation != 'rectangle' and operation != 'circle' and operation != 'triangle'):
+		print ("You might wanna check the spelling")
+	else:
+		if(operation == 'rectangle'):
+			var1 = int(input("Enter length: "))
+			var2 = int(input("Enter width: "))
+			print(areaRectangle(var1, var2))
+		elif(operation == 'triangle'):
+			var1 = int(input("Enter base: "))
+			var2 = int(input("Enter height: "))
+			print(areaTriangle(var1, var2))
+		elif(operation == 'square'):
+			var1 = int(input("Enter side: "))
+			print(areaSquare(var1))
+		else:
+			var1 = int(input("Enter radius: "))
+			print(areaCircle(var1))
+	
+
+main()
+	
